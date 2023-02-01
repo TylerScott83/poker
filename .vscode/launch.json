@@ -1,0 +1,18 @@
+{
+  "version":"0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Launch PokerServiceApplication",
+      "request": "launch",
+      "mainClass": "com.tsc.pokerservice.PokerServiceApplication",
+      "projectName": "poker-service"
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch localhost swagger page",
+      "url": "http://localhost:8080/poker/v3/swagger-ui/index.html?configUrl=/poker/swagger/api-docs/swagger-config#"
+    }
+  ]
+}

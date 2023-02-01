@@ -1,0 +1,45 @@
+<div class="container-fluid welcome-container flex-center">
+  <div class="make-row flex-center">
+    <div class="make-col-full">
+
+      <div>
+        <div class="bg"></div>
+        <div class="bg bg2"></div>
+        <div class="bg bg3"></div>
+      </div>
+
+      <ng-container *ngIf="form">
+        <div class="form-section">
+          <form [formGroup]="form" (ngSubmit)="submit(form)">
+
+            <div class="form-row">
+              <div class="form-item">
+                <div><label class="form-label" for="user-name">Username:</label></div>
+                <div>
+                  <input id="user-name" formControlName="userName">
+                </div>
+    
+                <div class="inline-error" *ngIf="f['userName'].touched && f['userName'].errors && f['userName'].errors['required']">
+                  <span aria-live="polite">User name is required.</span></div>
+    
+                <div class="inline-error" *ngIf="f['userName'].touched && f['userName'].errors && (f['userName'].errors['minlength'] || f['userName'].errors['maxlength'])">
+                  <span aria-live="polite">User name is invalid.</span></div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-item">
+                <div class="button-section">
+                  <button class="button full grey right-arrow" type="submit">Continue</button>
+                </div>
+              </div>
+            </div>
+
+          </form>
+
+        </div>
+      </ng-container>
+
+    </div>
+  </div>
+</div>

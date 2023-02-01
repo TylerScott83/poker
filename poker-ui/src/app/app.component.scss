@@ -1,0 +1,6 @@
+@import "../bootstrap.scss";
+
+.app-col {
+  @include make-col-ready();
+  @include make-col(6);
+}

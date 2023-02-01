@@ -1,0 +1,15 @@
+<div class="container-fluid header-spacing">
+  <div class="make-row">
+    <div class="make-col-full flex-center">
+      <h1>Under Construction</h1>
+    </div>
+  </div>
+
+  <div class="make-row">
+    <div class="make-col-full flex-center">
+      <div>Coming
+        <span *ngFor="let word of constructionDate; let i = index" [ngClass]="{'font-green': i % 2 == 0, 'font-red': i % 2 != 0}">{{word}}</span>
+      </div>
+    </div>
+  </div>
+</div>

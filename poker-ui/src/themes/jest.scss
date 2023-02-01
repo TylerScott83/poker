@@ -1,0 +1,36 @@
+$color-jest-shadow: #8c8c8c;
+$color-jest-background: #ececec;
+$color-jest-border: #000000;
+$color-jest-club-spade: #3b3b3b;
+$color-jest-heard-diamond: #2816cc;
+
+.card-container {
+  &.jest {
+    box-shadow: 5px 5px 10px $color-jest-shadow;
+    border-radius: 10px;
+    border-color: $color-jest-border;
+    background-color: $color-jest-background;
+  }
+}
+
+.card-top-bot {
+  &.jest {
+    &.spade, &.club {
+      color: $color-jest-club-spade;
+    }
+    &.diamond, &.heart, &.blank {
+      color: $color-jest-heard-diamond;
+    }
+  }
+}
+
+.card-middle {
+  &.jest {
+    &.spade, &.club {
+      color: $color-jest-club-spade;
+    }
+    &.diamond, &.heart, &.blank {
+      color: $color-jest-heard-diamond;
+    }
+  }
+}

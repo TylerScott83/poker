@@ -1,0 +1,30 @@
+<ng-container *ngIf="!card">. . .</ng-container>
+<ng-container *ngIf="card">
+  <div class="card-container {{card.style}} {{card.size}}">
+
+    <div class="card-top-bot {{card.size}} {{card.style}} {{card.cardSuit}}">
+      <div class="card-value">
+        <div class="text-{{card.size}}">{{card.cardValue}}</div>
+        <span class="{{card.size}}" [innerHtml]="card.cardSymbol"></span>
+      </div>
+    </div>
+
+    <div class="card-middle {{card.size}} {{card.style}} {{card.cardSuit}}">
+      <div class="container-fluid">
+        <div class="make-row flex-center">
+          <div class="col-{{card.cardValue}} {{card.size}}" *ngFor="let sym of symbolCnt">
+              <div class="flex-center" [innerHtml]="card.cardSymbol"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-top-bot rotate {{card.size}} {{card.style}} {{card.cardSuit}}">
+      <div class="card-value">
+        <div class="text-{{card.size}}">{{card.cardValue}}</div>
+        <span class="{{card.size}}" [innerHtml]="card.cardSymbol"></span>
+      </div>
+    </div>
+    
+  </div>
+</ng-container>

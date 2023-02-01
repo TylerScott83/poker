@@ -1,0 +1,36 @@
+$color-inverted-shadow: #8c8c8c;
+$color-inverted-background: #000000;
+$color-inverted-border: #ffffff;
+$color-inverted-club-spade: #e9e9e9;
+$color-inverted-heard-diamond: #2816cc;
+
+.card-container {
+  &.inverted {
+    box-shadow: 5px 5px 10px $color-inverted-shadow;
+    border-radius: 10px;
+    border-color: $color-inverted-border;
+    background-color: $color-inverted-background;
+  }
+}
+
+.card-top-bot {
+  &.inverted {
+    &.spade, &.club {
+      color: $color-inverted-club-spade;
+    }
+    &.diamond, &.heart, &.blank {
+      color: $color-inverted-heard-diamond;
+    }
+  }
+}
+
+.card-middle {
+  &.inverted {
+    &.spade, &.club {
+      color: $color-inverted-club-spade;
+    }
+    &.diamond, &.heart, &.blank {
+      color: $color-inverted-heard-diamond;
+    }
+  }
+}

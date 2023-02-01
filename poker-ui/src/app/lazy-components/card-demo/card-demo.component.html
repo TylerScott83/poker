@@ -1,0 +1,57 @@
+<div class="container-fluid">
+
+  <div class="make-row">
+    <div class="make-col-full">
+      <span>Go Crazy!!!: </span>
+      <span><button class="button yellow" (click)="rando()">Crazy!</button></span>
+    </div>
+  </div>
+
+  <div class="make-row">
+    <div class="make-col-full">
+      <span>Change size: </span>
+      <span><button class="button blue" (click)="changeSize(small)">Small</button></span>
+      <span><button class="button blue" (click)="changeSize(medium)">Medium</button></span>
+    </div>
+  </div>
+
+  <div class="make-row">
+    <div class="make-col-full">
+      <span>Change Symbol: </span>
+      <span><button class="button grey" (click)="changeSuit(suitHeart, symbolHeart)">Heart</button></span>
+      <span><button class="button grey" (click)="changeSuit(suitDiamond, symbolDiamond)">Diamond</button></span>
+      <span><button class="button grey" (click)="changeSuit(suitSpade, symbolSpade)">Spade</button></span>
+      <span><button class="button grey" (click)="changeSuit(suitClub, symbolClub)">Club</button></span>
+    </div>
+  </div>
+
+  <div class="make-row">
+    <div class="make-col-full">
+      <span>Change Style: </span>
+      <span><button class="button red" (click)="changeStyle(styleDefault)">Default</button></span>
+      <span><button class="button red" (click)="changeStyle(styleDark)">Dark</button></span>
+      <span><button class="button red" (click)="changeStyle(styleInverted)">Inverted</button></span>
+      <span><button class="button red" (click)="changeStyle(styleJest)">Jest</button></span>
+    </div>
+  </div>
+
+  <div>
+
+    <div *ngFor="let val of valueCards" class="form-check form-switch" style="display: inline-flex; padding-left: 2rem; padding-right: 2rem;">
+      <input class="form-check-input" type="checkbox" id="{{val}}" (click)="addValue(val)">
+      <label class="form-check-label" style="padding-left: .3rem;" for="{{val}}">{{val}}</label>
+    </div>
+
+  </div>
+
+  <div>
+    <span *ngFor="let v of cardValue"> {{ v }}</span>
+  </div>
+
+  <div class="make-row">
+    <div class="make-col" *ngFor="let card of demoCards">
+      <app-single-card [card]="card"></app-single-card>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,18 @@
+<div class="container-fluid dashboard-section">
+
+  <div class="dashboard-section-row">
+    <div class="dashboard-section-col flex-center">
+      
+      <div class="container">
+        <div class="option-items-row flex-center">
+          <div class-="option-items-col">
+            <button id="new-game-button" *ngFor="let item of dashboardItems" role="link" class="button {{item.button}}"
+            (click)="navigateTo(item.route)">{{item.name}}</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,15 @@
+<div class="container-fluid player-board-section" [ngClass]="{'rotate': !playerBoard}">
+
+  <div class="player-board-row">
+    <div class="player-board-info flex-center">
+      <ng-container *ngIf="playerBoard">Player One</ng-container>
+      <ng-container *ngIf="!playerBoard">Player Two</ng-container>
+    </div>
+    <ng-container *ngIf="cards">
+      <div class="player-board-card flex-center" *ngFor="let playerCard of cards">
+        <app-single-card [card]="playerCard"></app-single-card>
+      </div>
+    </ng-container>
+  </div>
+
+</div>

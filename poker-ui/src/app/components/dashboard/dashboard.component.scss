@@ -1,0 +1,37 @@
+@import "../../../bootstrap.scss";
+
+.dashboard-section {
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  background-color: $color-form-background;
+
+  .dashboard-section-row {
+    height: 70vh;
+    justify-content: center;
+    @include make-row();
+
+    .dashboard-section-col {
+      @include make-col-ready();
+      @include make-col(10);
+
+      @include media-breakpoint-up('sm') {
+        @include make-col(6);
+      }
+
+      .option-items-row {
+        display: block;
+        padding: 1rem;
+        @include make-row();
+      
+        .option-items-col {
+          padding: 1rem;
+          @include make-col-ready();
+          @include make-col(12);
+        }
+      }
+
+    }
+  }
+}

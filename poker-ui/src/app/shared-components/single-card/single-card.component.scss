@@ -1,0 +1,249 @@
+@import "../../../bootstrap.scss";
+@import "../../../themes/themes.scss";
+
+.card-container {
+  border: 2px solid;
+  margin: .4rem;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &.sm {
+    height: 200px;
+    width: 150px;
+  }
+
+  &.md {
+    height: 300px;
+    width: 200px;
+  }
+
+  .card-top-bot {
+
+    &.rotate {
+      transform: rotate(180deg);
+    }
+
+    height: 18%;
+    width: 100%;
+
+    &.sm {
+      padding: .1rem;
+    }
+    &.md {
+      padding: .2rem;
+    }
+
+    .card-value {
+      width: 20%;
+      text-align: center;
+
+
+      .text-sm {
+        font-size: 25px;
+        line-height: 25px;
+      }
+      .text-md {
+        font-size: 30px;
+        line-height: 25px;
+      }
+      .sm {
+        display: none;
+      }
+      .md {
+        font-size: 20px;
+        line-height: 0;
+      }
+    }
+  }
+
+  .card-middle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    padding: .1rem;
+    height: 64%;
+    width: 100%;
+
+    &.sm {
+      padding: .1rem;
+    }
+    &.md {
+      padding: .2rem;
+    }
+  }
+
+}
+
+.col-A {
+  @include make-col-ready();
+  @include make-col(12);
+
+  &.sm {
+    font-size: 50px;
+  }
+  &.md {
+    font-size: 80px;
+  }
+}
+.col-2 {
+  @include make-col-ready();
+  @include make-col(12);
+
+  &.sm {
+    font-size: 50px;
+  }
+  &.md {
+    font-size: 80px;
+  }
+}
+.col-3 {
+  @include make-col-ready();
+  @include make-col(12);
+
+  &.sm {
+    font-size: 40px;
+  }
+  &.md {
+    font-size: 60px;
+  }
+}
+.col-4 {
+  @include make-col-ready();
+  @include make-col(6);
+
+  &.sm {
+    font-size: 50px;
+  }
+  &.md {
+    font-size: 70px;
+  }
+}
+.col-5 {
+  @include make-col-ready();
+  @include make-col(5);
+
+  &.sm {
+    font-size: 35px;
+  }
+  &.md {
+    font-size: 55px;
+  }
+}
+.col-6 {
+  @include make-col-ready();
+  @include make-col(6);
+
+  &.sm {
+    font-size: 35px;
+  }
+  &.md {
+    font-size: 55px;
+  }
+}
+.col-7 {
+  @include make-col-ready();
+  @include make-col(4);
+
+  &.sm {
+    font-size: 35px;
+  }
+  &.md {
+    font-size: 50px;
+  }
+}
+.col-8 {
+  @include make-col-ready();
+  @include make-col(6);
+
+  &.sm {
+    font-size: 30px;
+  }
+  &.md {
+    font-size: 40px;
+  }
+}
+.col-9 {
+  @include make-col-ready();
+  @include make-col(4);
+
+  &.sm {
+    font-size: 35px;
+  }
+  &.md {
+    font-size: 45px;
+  }
+}
+.col-10 {
+  @include make-col-ready();
+
+  &.sm {
+    @include make-col(3);
+    font-size: 30px;
+  }
+  &.md {
+    @include make-col(5);
+    font-size: 35px;
+  }
+}
+.col-J {
+  @include make-col-ready();
+  @include make-col(2);
+
+  &.sm {
+    font-size: 100px;
+  }
+  &.md {
+    font-size: 150px;
+  }
+}
+.col-Q {
+  @include make-col-ready();
+  @include make-col(2);
+
+  &.sm {
+    font-size: 100px;
+  }
+  &.md {
+    font-size: 150px;
+  }
+}
+.col-K {
+  @include make-col-ready();
+  @include make-col(2);
+
+  &.sm {
+    font-size: 100px;
+  }
+  &.md {
+    font-size: 150px;
+  }
+}
+.col-Joker {
+  @include make-col-ready();
+  @include make-col(2);
+
+  &.sm {
+    font-size: 100px;
+  }
+  &.md {
+    font-size: 150px;
+  }
+}
+.col- {
+  @include make-col-ready();
+  @include make-col(12);
+
+  &.sm {
+    margin-top: -2rem;
+    font-size: 140px;
+  }
+  &.md {
+    font-size: 80px;
+  }
+}

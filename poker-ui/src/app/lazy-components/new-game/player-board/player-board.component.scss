@@ -1,0 +1,27 @@
+@import "../../../../bootstrap.scss";
+
+.player-board-section {
+  padding: 1rem;
+  width: 100%;
+  height: 30vh;
+  background-color: $color-form-background;
+
+  &.rotate {
+    transform: rotate(180deg);
+  }
+
+  .player-board-row {
+    height: 100%;
+    @include make-row();
+
+    .player-board-info {
+      @include make-col-ready();
+      @include make-col(6);
+    }
+
+    .player-board-card {
+      @include make-col-ready();
+      @include make-col(2);
+    }
+  }
+}

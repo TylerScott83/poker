@@ -1,0 +1,34 @@
+<div class="container-fluid dealer-board-section">
+
+  <div class="dealer-board-row">
+
+    <!-- Reshuffle -->
+    <div class="dealer-board-stack flex-center">
+      <app-card-stack (emitButtonEvent)="buttonEmit($event)"></app-card-stack>
+    </div>
+
+    
+    <!-- Cards -->
+    <ng-container *ngIf="cards === undefined">
+      <div class="dealer-board-card flex-center">
+        <app-single-card [card]="card"></app-single-card>
+      </div>
+      <div class="dealer-board-card flex-center">
+        <app-single-card [card]="card"></app-single-card>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="cards">
+      <div class="dealer-board-card flex-center" *ngFor="let playCard of cards">
+        <app-single-card [card]="playCard"></app-single-card>
+      </div>
+    </ng-container>
+
+
+    <!-- Info section -->
+    <div class="dealer-board-info flex-center">
+      <app-game-statistic [deckCount]="deckCount" [deckCountTotal]="deckCountTotal"></app-game-statistic>
+    </div>
+
+  </div>
+
+</div>

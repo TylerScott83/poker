@@ -1,0 +1,23 @@
+@import "../../../../bootstrap.scss";
+
+.card-stack-row {
+  display: inline-flex;
+  .card-stack-one {
+    margin: -1rem 0 0 0rem;
+  }
+  .card-stack-two {
+    margin: -0.5rem 0 0 -9rem;
+  }
+  .card-stack-three {
+    margin: 0 0 0 -9rem;
+  }
+}
+.card-stack-new-game-row {
+  @include make-row();
+
+  .card-stack-new-game-col {
+    padding-top: 2rem;
+    @include make-col-ready();
+    @include make-col(12);
+  }
+}

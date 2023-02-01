@@ -1,0 +1,11 @@
+<div class="card-stack-row">
+  <span class="card-stack-one"><app-single-card [card]="card"></app-single-card></span>
+  <span class="card-stack-two"><app-single-card [card]="card"></app-single-card></span>
+  <span class="card-stack-three"><app-single-card [card]="card"></app-single-card></span>
+</div>
+<div class="card-stack-new-game-row">
+  <div class="card-stack-new-game-col flex-center">
+    <button role="button" class="button grey" (click)="buttonEmit('new')">New Deck</button>
+    <button role="button" class="button yellow" (click)="buttonEmit('result')">Winner?</button>
+  </div>
+</div>

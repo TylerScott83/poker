@@ -1,0 +1,4 @@
+<app-player-board [cards]="playerNPCCards"></app-player-board>
+<app-dealer-board (emitButtonEvent)="buttonEmit($event)"
+  [cards]="dealerCards" [deckCount]="deckCount" [deckCountTotal]="deckCountTotal"></app-dealer-board>
+<app-player-board [playerBoard]="true" [cards]="playerPCCards"></app-player-board>
